@@ -1,0 +1,13 @@
+# Build Arduino / arduino-cli
+build/
+*.bin
+*.elf
+*.map
+
+# Backups / temporaires
+*.bak
+*.tmp
+*~
+
+# Config locale runtime (jamais versionner de secrets)
+parametres.json
