@@ -435,8 +435,8 @@ byte ESP32_Type = 0;                                                    //0=Inco
                                                                         //9 = Ecran 320*240 ST7789/BL27  2.8pouces capacitif
                                                                         //10 = ESP32-ETH01
 byte LEDgroupe = 0;                                                     //0:pas de LED,1à9 pour les LED. 10 et 11 pour les écrans  OLED
-byte LEDyellow[] = { 0, 18, 4, 2, 4, 0, 0, 0, 0, 0, 18, 4, 18, 4 };     //Ou SDA pour OLED
-byte LEDgreen[] = { 0, 19, 16, 4, 17, 0, 0, 0, 0, 0, 19, 32, 19, 32 };  //ou SCL pour OLED
+byte LEDyellow[] = { 0, 18, 4, 2, 4, 0, 0, 0, 0, 0, 17, 4, 18, 4 };     //Ou SDA pour OLED  (grp10 -> 17 = SDA PCB Maison)
+byte LEDgreen[] = { 0, 19, 16, 4, 17, 0, 0, 0, 0, 0, 32, 32, 19, 32 };  //ou SCL pour OLED  (grp10 -> 32 = SCL PCB Maison)
 unsigned long Gateway = 0;
 unsigned long masque = 4294967040;
 unsigned long dns = 0;
