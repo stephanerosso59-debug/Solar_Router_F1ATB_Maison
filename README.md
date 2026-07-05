@@ -47,6 +47,22 @@ Fonctions principales (héritées de F1ATB) :
 
 ---
 
+## 📟 Affichage OLED (SSD1306 0.96") — ajout « Maison »
+Écran I2C optionnel sur **SDA=GPIO17 / SCL=GPIO32** (VCC 3.3V). Activé via la config carte **« WROOM + OLED »** (`LEDgroupe = 10`, adapté à ce PCB).
+
+**3 pages qui alternent** (~4 s chacune) :
+1. **Réseau** (W) + jauge + **% routage**
+2. **Tension / Courant** (UxI) + **Température**
+3. **Énergie du jour** (kWh soutiré/injecté) + **IP**
+
+**Veille auto** (anti burn-in, sans tactile) : écran éteint après 3 min sans changement, **réveil automatique** sur variation de puissance (>100 W) + heartbeat (10 min / 30 s).
+
+**Bouton secours** (optionnel) : poussoir entre **D2 (GPIO2)** et GND → réveil + page suivante *(pull-up interne, pas de résistance)*.
+
+*(Code : `EcranLED.ino`.)*
+
+---
+
 ## 🔒 Sécurité / configuration
 
 - **Aucun secret n'est versionné** : le SSID / mot de passe WiFi se saisissent **au runtime**
